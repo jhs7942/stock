@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+	input{
+		
+		width:100px;
+	}
+	
+	section{
+	
+	float: left;
+	margin-left: 100px;
+	
+	}
+	
+	hr{
+	
+	margin-top: 200px;
+	
+	}
+	
+	#title{
+	
+	width : 800px;
+	height: 30px;
+	
+	}
+
+	#memoList {
+
+	margin-right : auto;
+	margin-left : auto;
+
+}
+
+	

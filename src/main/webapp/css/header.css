@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+	*{
+		margin : 0px;
+		padding : 0px;
+	}
+
+	header {
+	
+	background-color: gray;
+	color: white;
+	padding-top: 10px;
+	
+	}
+	
+	nav {
+	
+	margin-bottom: 50px;
+	background-color: silver;
+	color: white;
+	height : 30px;
+	
+	}
