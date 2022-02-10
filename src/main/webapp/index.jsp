@@ -40,10 +40,8 @@
 	<jsp:include page="search.jsp"></jsp:include>
 	<jsp:include page="MyList.jsp"></jsp:include>
 	<section>
-		<div class="group1">
+		<div class="group1" id ="exchange_rate">
 			<jsp:include page="exchange.jsp"></jsp:include>
-		</div>
-		<div class="group2">
 			<jsp:include page="Oil.jsp"></jsp:include>
 		</div>
 	</section>

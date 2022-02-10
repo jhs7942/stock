@@ -48,10 +48,14 @@
 	<form action="Memo_modify" method="post">
 		<input type = "hidden" value = <%=rs.getString("code") %> name = "code">
 		<input type = "hidden" value = <%=rs.getString("memocode") %> name = "memocode">
-		<input type = "text" name="title" placeholder="제목을 입력하세요." id = "title" value = "<%=rs.getString("title")%>"><br>
-		<textarea name="text" rows="10" cols="10" placeholder="주요사항을 작성하세요." style="width: 800px;" ><%=rs.getString("text")%></textarea><br>
-		<input type="submit" value="수정">
-		<input type="button" value="뒤로가기" onclick="move_result()">
+		<div class="mb-3" style="position : relative ; left:550px">
+			<input type = "text" name="title" placeholder="제목을 입력하세요." id = "title" value = "<%=rs.getString("title")%>" class="form-control">
+		</div>
+		<div class="mb-3" style="position : relative ; left:550px">
+			<textarea name="text" rows="10" cols="10" placeholder="주요사항을 작성하세요." style="width: 800px;" class="form-control" style="position : relative ; left:600px"><%=rs.getString("text")%></textarea>
+		</div>
+		<input type="submit" value="수정" class="btn btn-primary">
+		<input type="button" value="뒤로가기" onclick="move_result()" class="btn btn-warning">
 	</form>
 </main>
 </body>

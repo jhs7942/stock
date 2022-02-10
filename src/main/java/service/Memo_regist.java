@@ -2,7 +2,6 @@
 package service;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -24,7 +23,7 @@ public class Memo_regist extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		Date d = new Date();
-		
+
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년MM월dd일");
 		String date = sdf.format(d);
 		request.setCharacterEncoding("utf-8");

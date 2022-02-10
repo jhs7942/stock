@@ -6,16 +6,15 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<link rel="stylesheet" href = "css/main.css">
+
 <script src="js/checkTest.js"></script>
 <body>
 
 <main>
-	<h3>검색할 주식 코드를 입력하세요.</h3>
-	
-	<form action="search" method = "get" name="frm">
-		<input type = "text" name = "code" class="search"><br>
-		<input type = "submit" value = "조회" class="search" onclick="return check_search()">
+	<form action="search" method = "get" name="frm" class="text-center">
+		<label for="search"><h3>검색할 주식 코드를 입력하세요.</h3></label>
+		<input type = "text" name = "code" class="w-25 form-control container center_div" id="search"><br>
+		<input type = "submit" value = "조회" class="btn btn-primary" onclick="return check_search()">
 	</form>
 </main>
 

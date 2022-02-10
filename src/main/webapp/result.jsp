@@ -21,10 +21,10 @@
 		<div id="price">${price }</div><br>
 	</section>
 	<form action="MyList_reigst" method = "get">
-		<input type = "hidden" value = ${code } name = "code">
+	<input type = "hidden" value = ${code } name = "code">
 		<input type="hidden" value = ${name } name = "name">
-		<input type="button" value = "홈으로" onclick="move_index()">
-		<input type = "submit" value = "관심목록 추가">
+		<input type="button" value = "홈으로" onclick="move_index()" class="btn btn-primary">
+		<input type = "submit" value = "관심목록 추가" class="btn btn-success" style="width:150px">
 	</form>
 	<hr>
 	<jsp:include page="memo.jsp"></jsp:include>

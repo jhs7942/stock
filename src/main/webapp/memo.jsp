@@ -7,7 +7,7 @@
     
     <%	
     String code = (String)session.getAttribute("code");
-    boolean result = true;
+    boolean result = true;// 등록된 메모의 수가 0개면 메모가 출력되지 않도록 하기 위함
     Connection conn = DBcon.getConnection();
     String sql = "SELECT COUNT(text) count FROM memo where code = ?";
     PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -17,14 +17,14 @@
     int memocode = 0;
     if(rs.getInt("count") == 0){
     	result = false;
-    	memocode = 1;
+    	memocode = 1; //새로 등록할 메모의 메모코드
     }else {
     	sql = "select max(memocode)+1 memocode from memo where code = ?";
     	pstmt = conn.prepareStatement(sql);
     	pstmt.setString(1, code);
     	rs = pstmt.executeQuery();
     	rs.next();
-    	memocode = rs.getInt("memocode");
+    	memocode = rs.getInt("memocode");//새로 등록할 메모의 메모코드
     }
     
     session.setAttribute("result", result);
@@ -39,12 +39,16 @@
 <body>
 	<section2>
 		<h1>메모</h1>
-		<form action="Memo_regist" method="post">
+		<form action="Memo_regist" method="post" class="text-center" style="margin-left : 700px;">
 			<input type = "hidden" value = ${code } name = "code">
 			<input type = "hidden" value = <%=memocode %> name = "memocode">
-			<input type = "text" name="title" placeholder="제목을 입력하세요." id="title"><br>
-			<textarea rows="10" cols="10" name="text" placeholder="주요사항을 작성하세요." style="width: 800px;" ></textarea><br>
-			<input type="submit" value="등록">
+			<div class="mb-3">
+				<input type = "text" name="title" placeholder="제목을 입력하세요." id="title" class="form-control">
+			</div>
+			<div class="mb-3">
+				<textarea rows="10" cols="10" name="text" placeholder="주요사항을 작성하세요." style="width: 800px;" class="form-control"></textarea>
+				<input type="submit" value="등록" class="btn btn-secondary" style="position : relative ; left:140px">
+			</div>
 		</form>
 	</section2>
 
@@ -95,7 +99,7 @@
 			<tr>
 				<td></td>
 				<td></td>
-				<td><input type="submit" value="삭제" id="delete"></td>
+				<td><input type="submit" value="삭제" id="delete" class="btn btn-danger"></td>
 				
 			</tr>
 		</table>

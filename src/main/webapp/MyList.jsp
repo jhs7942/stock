@@ -19,12 +19,6 @@
 		margin-top: 10px;
 	}
 
-	#delete {
-	
-	 width: 50px;
-	 height: 30px;
-	
-	}
 </style>
 <body>
 	<form action="MyList_delete" method="get">
@@ -39,7 +33,7 @@
 <%-- 						<td >${company.price }</td> --%>
 				</tr>
 			</c:forEach>
-			<th><input type="submit" value="삭제" id="delete"></th>
+			<tr><th><input type="submit" value="삭제" id="delete" class="btn btn-danger"><th></tr>
 		</table>
 		</div>
 	</form>

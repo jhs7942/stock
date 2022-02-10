@@ -8,11 +8,41 @@
 <script src="js/reload.js"></script>
 </head>
 <body>
-	<div id="Oil" style="text-align: left;">
-		<h1>유가</h1>
-		<h3>WTI ${WTI.value } 달러/배럴 ${WTI.change } ${WTI.blind }</h3>
-		<h3>두바이유 ${dobai.value } 달러/배럴 ${dobai.change } ${dobai.blind }</h3>
-		<h3>브렌트유 ${brant.value } 달러/배럴 ${brant.change } ${brant.blind }</h3>
-	</div>
+
+	<table class="table w-50">
+  <thead>
+    <tr>
+      <th scope="col">상품명</th>
+      <th scope="col">유가</th>
+      <th scope="col">단위</th>
+      <th scope="col">전일비</th>
+      <th scope="col">변동</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+   		<td>WTI</td>
+     	<td>${WTI.value }</td>
+     	<td>달러/배럴</td>
+      	<td>${WTI.change }</td>
+      	<td>${WTI.blind }</td>
+    </tr>
+    <tr>
+    	<td>두바이유</td>
+     	<td>${dobai.value }</td>
+     	<td>달러/배럴</td>
+     	<td>${dobai.change }</td>
+     	<td>${dobai.blind }</td>
+    </tr>
+    <tr>
+        <td>브렌트유</td>
+     	<td>${brant.value }</td>
+     	<td>달러/배럴</td>
+     	<td>${brant.change }</td>
+     	<td>${brant.blind }</td>
+    </tr>
+  </tbody>
+	</table>
+
 </body>
 </html>

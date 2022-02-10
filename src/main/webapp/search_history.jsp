@@ -32,7 +32,7 @@
 </style>
 <body>
 
-<h1>검색 기록</h1>
+<h1 class="text-center">검색 기록</h1>
 <table id="history" >
 	<tr>
 		<%while(rs.next()){ %>
